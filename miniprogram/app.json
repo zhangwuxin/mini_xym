@@ -22,7 +22,7 @@
     "backgroundColor": "#F0E68C",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#BDB76B",
-    "navigationBarTitleText": "小元满",
+    "navigationBarTitleText": "不吃蛋糕",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -36,11 +36,6 @@
       "text": "分类",
       "iconPath": "pages/images/classify.png",
       "selectedIconPath": "pages/images/classify_fill.png"
-    },{
-      "pagePath": "pages/shopping/shopping",
-      "text": "购物车",
-      "iconPath": "pages/images/shopping.png",
-      "selectedIconPath": "pages/images/shopping_fill.png"
     },{
       "pagePath": "pages/me/me",
       "text": "个人中心",

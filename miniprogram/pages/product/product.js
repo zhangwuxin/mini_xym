@@ -14,44 +14,44 @@ Page({
     array:[],
     shoucang:['../me/img/shoucang.png','./img/xin2.png'],
     openid:'',
-    pinglun_value:''
+    pinglun_list:[],
+    pinglun_value:"",
   },
-
-  // 获取评论的内容
+  // 评论
+  // 获取输入框的值
   pinglun_value(res){
-    console.log(res.detail.value);
-    this.setData({
+    var that = this;
+    that.setData({
       pinglun_value:res.detail.value
     })
   },
-
-  // 评论
   getuserinfo(res){
     var that = this;
     var id = that.data.array._id;
+    var pinglun_value = that.data.pinglun_value;
     var userName = '';
     var userImg = '';
     var time = util.formatTime(new Date());
-    var neirong = that.data.pinglun_value;
-    var pinglun = that.data.array.pinglun;
-    console.log(pinglun);
+    var pinglun_list = that.data.pinglun_list;
+    
     wx.getUserProfile({
       desc:'获取用户信息',
       success(res) {
         userName = res.userInfo.nickName;
         userImg = res.userInfo.avatarUrl;
-        var array = {
-          neirong:neirong,time:time,userName:userName,userImg:userImg
+        var pinglun_json = {
+          product_id:id,
+          pinglun_value:pinglun_value,
+          time:time,
+          userName:userName,
+          userImg:userImg,
         }
-        pinglun.push(array);
-        console.log(pinglun)
+        console.log("pinglun_json : ", pinglun_json)
         wx.cloud.callFunction({
           name:'upDatePingLun',
-          data:{
-            id:id,
-            pinglun:pinglun
-          },
+          data:pinglun_json,
           success(res){
+            pinglun_list.push(pinglun_json);
             console.log("评论上传成功");
             wx.cloud.callFunction({
               name:'selectProduct',
@@ -59,10 +59,9 @@ Page({
                 id:id
               },
               success(res){
-                console.log("最新内容为:",res.result.data);
                 that.setData({
                   array:res.result.data[0],
-                  pinglun_value:null
+                  pinglun_value:pinglun_value
                 })
               }
             })
@@ -207,7 +206,6 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    console.log(id);
     wx.cloud.callFunction({
       name:'selectProduct',
       data:{
@@ -241,6 +239,20 @@ Page({
                   }
                 }
               }
+            })
+          }
+        })
+         // 获取评论信息
+         wx.cloud.callFunction({
+          name:'getPinglun',
+          data:{
+            id:id
+          },
+          success(res){
+            console.log("!!!!!!!!??!!!")
+            console.log(id)
+            that.setData({
+              pinglun_list:res.result.data
             })
           }
         })

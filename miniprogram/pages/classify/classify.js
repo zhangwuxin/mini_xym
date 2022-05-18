@@ -4,15 +4,13 @@ Page({
 
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
     left_name:[
-              {id:1,name:'水果'},
-              {id:6,name:'熟食卤味'},
-              {id:7,name:'冰品面点'},
-              {id:8,name:'牛奶面包'},
-              {id:9,name:'酒水冷饮'},
-              {id:10,name:'休闲零食'}
+              {id:1,name:'生日蛋糕'},
+              {id:2,name:'提拉米苏'},
+              {id:3,name:'小吃甜点'},
+              {id:4,name:'风味饮料'},
     ],
     all:[],
     product:[],

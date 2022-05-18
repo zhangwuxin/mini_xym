@@ -22,14 +22,16 @@
   <view class="body_middle">
   <view class="img_text">
     <image src="./img/pinglun.png"></image>
-    <text>共{{array.pinglun.length}}条评论</text>
+    <text>共{{pinglun_list.length}}条评论</text>
   </view>
   <view class="pinglun_middle">
-    <view class="neirong" wx:for="{{array.pinglun}}" wx:key="index">
+    <view class="neirong" wx:for="{{pinglun_list}}" wx:key="index">
       <image src="{{item.userImg}}"></image>
+      <text style="color:orange;font-size:30rpx" >{{item.userName}}</text>
       <view class="texts">
         <view class="name_time">
-          <text style="color:orange;font-size:30rpx" >{{item.userName}}</text>
+          <text style="color:rgb(22, 20, 16);font-size:30rpx" >{{item.pinglun_value}}</text>
+          
           <text style="color:gray;font-size:25rpx;margin-left:10rpx">{{item.time}}</text>
         </view>
         <text class="neirong_value">{{item.neirong}}</text>      
@@ -52,5 +54,5 @@
     <image src="{{shoucang[0]}}"></image>
     <text>收藏</text>
   </view>
-  <view class="bottom_right" bindtap="addToShopping">加入购物车</view>
+  <!-- <view class="bottom_right" bindtap="addToShopping">加入购物车</view> -->
 </view>

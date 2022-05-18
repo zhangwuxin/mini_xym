@@ -7,11 +7,12 @@ Page({
    */
   data: {
     height:0,
-    array:[{img:'./img/one.png',name:'水果'},
-    {img:'./img/six.png',name:'熟食卤味'},
-    {img:'./img/seven.png',name:'冰品面点'},
-    {img:'./img/eight.png',name:'牛奶面包'},
-    {img:'./img/nine.png',name:'酒水冷饮'},],
+    array:[
+         {img:'./img/six.png',name:'生日蛋糕'},
+         {img:'./img/seven.png',name:'提拉米苏'},
+         {img:'./img/eight.png',name:'小吃甜点'},
+         {img:'./img/nine.png',name:'风味饮料'},
+        ],
     array_tuijian:[
 
     ],
@@ -177,11 +178,14 @@ Page({
     // console.log(x,i);
     wx.cloud.callFunction({
       name:'findProduct',
+      data: {
+        _where: "isRecommend",
+        _value: 1,
+      },
       success(res){
+        console.log(res.result.data.length)
         for(var i = 0; i < res.result.data.length; i++){
-          if(res.result.data[i].isRecommend == '是'){
             array.push(res.result.data[i])
-          }
         }
         that.setData({
           array_tuijian:array

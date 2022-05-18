@@ -20,7 +20,7 @@
         <text>{{item.detail}}</text>
         <text>￥{{item.price}}</text>
       </view>
-      <text>销量：999</text>
+      <text>销量：{{item.sales}}</text>
     </view>
   </view>
 </view>
