@@ -54,5 +54,5 @@
     <image src="{{shoucang[0]}}"></image>
     <text>收藏</text>
   </view>
-  <!-- <view class="bottom_right" bindtap="addToShopping">加入购物车</view> -->
+  <view class="bottom_right" bindtap="addToShopping">加入购物车</view>
 </view>

@@ -1,164 +1,155 @@
 {
-    "miniprogramRoot": "miniprogram/",
-    "cloudfunctionRoot": "cloudfunctions/",
-    "setting": {
-        "urlCheck": true,
-        "es6": true,
-        "enhance": true,
-        "postcss": true,
-        "preloadBackgroundData": false,
-        "minified": true,
-        "newFeature": true,
-        "coverView": true,
-        "nodeModules": true,
-        "autoAudits": false,
-        "showShadowRootInWxmlPanel": true,
-        "scopeDataCheck": false,
-        "uglifyFileName": false,
-        "checkInvalidKey": true,
-        "checkSiteMap": true,
-        "uploadWithSourceMap": true,
-        "compileHotReLoad": false,
-        "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "enableEngineNative": false,
-        "useIsolateContext": false,
-        "userConfirmedBundleSwitch": false,
-        "packNpmManually": false,
-        "packNpmRelationList": [],
-        "minifyWXSS": true,
-        "disableUseStrict": false,
-        "minifyWXML": true,
-        "showES6CompileOption": false,
-        "useCompilerPlugins": false
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "appid": "wx66a60da0143f9827",
-    "projectname": "%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE",
-    "libVersion": "2.17.0",
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
-    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-    "condition": {
-        "plugin": {
-            "list": []
+    "enableEngineNative": false,
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "useStaticServer": true
+  },
+  "appid": "wx66a60da0143f9827",
+  "projectname": "%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE",
+  "libVersion": "2.17.0",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
         },
-        "game": {
-            "list": []
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "name": "pages/classify/classify",
+          "pathName": "pages/classify/classify",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "pages/me/me",
-                    "pathName": "pages/me/me",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/classify/classify",
-                    "pathName": "pages/classify/classify",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/shopping/shopping",
-                    "pathName": "pages/shopping/shopping",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/product_list/product_list",
-                    "pathName": "pages/product_list/product_list",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/recommend/recommend",
-                    "pathName": "pages/recommend/recommend",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/product/product",
-                    "pathName": "pages/product/product",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/address/address",
-                    "pathName": "pages/address/address",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/address_detail/address_detail",
-                    "pathName": "pages/address_detail/address_detail",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/myCollection/myCollection",
-                    "pathName": "pages/myCollection/myCollection",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/myOrder/myOrder",
-                    "pathName": "pages/myOrder/myOrder",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/shop_order/shop_order",
-                    "pathName": "pages/shop_order/shop_order",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/test/test",
-                    "pathName": "pages/test/test",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/addProduct/addProduct",
-                    "pathName": "pages/addProduct/addProduct",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/manageProduct/manageProduct",
-                    "pathName": "pages/manageProduct/manageProduct",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "pages/shopping/shopping",
+          "pathName": "pages/shopping/shopping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/product_list/product_list",
+          "pathName": "pages/product_list/product_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/recommend/recommend",
+          "pathName": "pages/recommend/recommend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/product/product",
+          "pathName": "pages/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/address/address",
+          "pathName": "pages/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/address_detail/address_detail",
+          "pathName": "pages/address_detail/address_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myCollection/myCollection",
+          "pathName": "pages/myCollection/myCollection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myOrder/myOrder",
+          "pathName": "pages/myOrder/myOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop_order/shop_order",
+          "pathName": "pages/shop_order/shop_order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addProduct/addProduct",
+          "pathName": "pages/addProduct/addProduct",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/manageProduct/manageProduct",
+          "pathName": "pages/manageProduct/manageProduct",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  },
+  "compileType": "miniprogram",
+  "srcMiniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }

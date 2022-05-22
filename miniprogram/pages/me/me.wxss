@@ -85,7 +85,7 @@ page {
 }
 .poster {
   width: 88%;
-  height: 250rpx;
+  height: 300rpx;
   display: inline-block;
   margin: 0 auto;
   margin-top: 180rpx;

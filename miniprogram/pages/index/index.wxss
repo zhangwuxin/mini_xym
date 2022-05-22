@@ -1,5 +1,5 @@
 page {
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 .head {
   display: flex;
@@ -29,6 +29,8 @@ swiper {
   height: auto;
   display: block;
 }
+
+
 .container {
   display: flex;
   flex-direction: row;

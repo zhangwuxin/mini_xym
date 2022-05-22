@@ -11,10 +11,11 @@ Page({
     classify:'',
     detail:'',
     stock:'',
-    isRecommend:'',
+    isRecommend:0,
     fileID:'',
-    recommendObject:[{name:'是',checked:false},
-                     {name:'否',checked:false}],
+    sales:0,
+    recommendObject:[{name:'1',checked:false},
+                     {name:'0',checked:false}],
     classifyObject:[{name:'生日蛋糕',checked:false},
                     {name:'提拉米苏',checked:false},
                     {name:'小吃甜点',checked:false},
@@ -49,7 +50,7 @@ Page({
   },
   isRecommend(res){
     this.setData({
-      isRecommend:res.detail.value
+      isRecommend:parseInt(res.detail.value)
     })
   },
   getPicture(res){
@@ -85,7 +86,7 @@ Page({
   submit(res){
     var that = this;
     console.log(that.data.name,that.data.classify,that.data.price,that.data.detail,that.data.isRecommend,that.data.fileID);
-    if(that.data.name == '' || that.data.classify == '' || that.data.price == '' || that.data.detail == '' ||that.data.isRecommend == '' || that.data.fileID == ''){
+    if(that.data.name == '' || that.data.classify == '' || that.data.price == '' || that.data.detail == ''  || that.data.fileID == ''){
       wx.showToast({
         title: '请完整填写信息',
       })
@@ -99,8 +100,9 @@ Page({
             fenlei:that.data.classify,
             price:that.data.price,
             detail:that.data.detail,
-            isRecommend:that.data.isRecommend,
-            fileID:that.data.fileID
+            isRecommend:parseInt(that.data.isRecommend),
+            fileID:that.data.fileID,
+            sales:0
           },
           success(res){
             console.log("信息修改成功");
@@ -126,7 +128,7 @@ Page({
             img_src:that.data.fileID,
             name:that.data.name,
             price:that.data.price,
-            pinglun:[],
+            sales:that.data.sales,
             isRecommend:that.data.isRecommend
           },
           success(res){
@@ -149,6 +151,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    console.log(that)
     var classifyObject = that.data.classifyObject;
     var recommendObject = that.data.recommendObject;
     console.log(options.data);

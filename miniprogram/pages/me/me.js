@@ -4,28 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show:false
-  },
-  adminPwd(e) {
-    var that = this;
-    if(e.detail.value == '123456') {
-      wx.showToast({
-        title: '密码正确',
-        success(res) {
-          wx.navigateTo({
-            url: '../admin/admin',
-          })
-          that.setData({
-            show:!that.data.show
-          })
-        }
-      })
-    }
+    show:false,
+    openid:'',
   },
   // 跳转到后台管理
   admin(){
-    this.setData({
-      show:!this.data.show
+    wx.navigateTo({
+      url: '../admin/admin',
     })
   },
   // 跳转订单管理页
@@ -42,11 +27,31 @@ Page({
       url: '../myCollection/myCollection',
     })
   },
+
+  // 跳转我的购物车
+  goToShoppingCar(res){
+    wx.redirectTo({
+      url: '../shopping/shopping',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+      var that = this
+      var openid = that.data.openid
+      wx.cloud.callFunction({
+      name:'OpenId',
+      success(res){
+        console.log("!!")
+        console.log(res)
+        if (res.result.openid == "owvNO46BJBnAfD977z7D-Vu3k7gU"){
+          that.setData({
+            show:true
+          }) 
+        }
+      }
+    })
   },
 
   /**

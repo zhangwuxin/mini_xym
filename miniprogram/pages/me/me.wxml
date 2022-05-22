@@ -4,24 +4,25 @@
     <open-data type="userNickName" lang="zh_CN" class="name"></open-data>
   </view>
   <view class="classify">
-    <!-- <view class="body">
-      <image src="cloud://dev-go-4guo66fn8e635899.6465-dev-go-4guo66fn8e635899-1308950335/images/me_img/img_1.png"></image>
+    <view class="body" bindtap="goToShoppingCar" data-name="待支付">
+      <image src="cloud://cloud-8g2aoqlhcb8dcebd.636c-cloud-8g2aoqlhcb8dcebd-1308950335/image/img_1.png"></image>
       <text>待支付</text>
-    </view> -->
-    <!-- <view class="body" bindtap="toOrder" data-name="待收货">
-      <image src="cloud://dev-go-4guo66fn8e635899.6465-dev-go-4guo66fn8e635899-1308950335/images/me_img/img_2.png"></image>
+    </view>
+    <view class="body" bindtap="toOrder" data-name="待收货">
+      <image src="cloud://cloud-8g2aoqlhcb8dcebd.636c-cloud-8g2aoqlhcb8dcebd-1308950335/image/img_2.png"></image>
       <text>待收货</text>
     </view>
     <view class="body" bindtap="toOrder" data-name="已完成">
-      <image src="cloud://dev-go-4guo66fn8e635899.6465-dev-go-4guo66fn8e635899-1308950335/images/me_img/img_3.png"></image>
+      <image src="cloud://cloud-8g2aoqlhcb8dcebd.636c-cloud-8g2aoqlhcb8dcebd-1308950335/image/img_3.png"></image>
       <text>已完成</text>
     </view>
     <view class="body" bindtap="toOrder" data-name="全部订单">
-      <image src="cloud://dev-go-4guo66fn8e635899.6465-dev-go-4guo66fn8e635899-1308950335/images/me_img/img_4.png"></image>
+      <image src="cloud://cloud-8g2aoqlhcb8dcebd.636c-cloud-8g2aoqlhcb8dcebd-1308950335/image/img_4.png"></image>
       <text>全部订单</text>
-    </view> -->
+    </view>
   </view>
 </view>
+
 <!-- <view class="container">
   <view class="text_left">
     <text class="text_left_top">0</text>
@@ -35,31 +36,23 @@
 <image src="../images/banner1.png" mode="widthFix" class="poster"></image>
 <view class="menu">
   <!-- <view class="menu_body">
-    <image src="cloud://dev-go-4guo66fn8e635899.6465-dev-go-4guo66fn8e635899-1308950335/images/me_img/yaoqingyouli.png"></image>
+    <image src="cloud://cloud-8g2aoqlhcb8dcebd.636c-cloud-8g2aoqlhcb8dcebd-1308950335/images/me_img/yaoqingyouli.png"></image>
     <text>邀请有礼</text>
   </view> -->
   <view class="menu_body" bindtap="goToCollection">
     <image src="../me/img/shoucang.png"></image>
     <text>我的收藏</text>
   </view>
-  <!-- <view class="menu_body" bindtap="admin">
+  <view class="menu_body" bindtap="goToShoppingCar">
+    <image src="../me/img/shopping_car.png"></image>
+    <text>购物车</text>
+  </view>
+  <view class="menu_body" bindtap="admin">
+    <image src="../me/img/address.png"></image>
+    <text>我的地址</text>
+  </view>
+  <view class="menu_body" bindtap="admin"  wx:if="{{show}}">
     <image src="../me/img/houtaiguanli.png"></image>
     <text>后台管理</text>
-  </view> -->
-  <!-- <view class="menu_body">
-    <image src="../me/img/shoucang.png"></image>
-    <text>测试</text>
   </view>
-  <view class="menu_body">
-    <image src="../me/img/shoucang.png"></image>
-    <text>测试</text>
-  </view> -->
-  <!-- <view class="menu_body">
-    <image src="cloud://dev-go-4guo66fn8e635899.6465-dev-go-4guo66fn8e635899-1308950335/images/me_img/zhaomu.png"></image>
-    <text>磊磊招聘</text>
-  </view> -->
-</view>
-<view class="Modal" wx:if="{{show}}">
-  <text>请输入密码</text>
-  <input type="text" bindinput="adminPwd" />
 </view>
