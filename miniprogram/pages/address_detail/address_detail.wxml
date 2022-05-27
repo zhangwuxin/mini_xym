@@ -1,2 +1,72 @@
-<!--pages/address_detail/address_detail.wxml-->
-<text>pages/address_detail/address_detail.wxml</text>
+<form bindsubmit="saveAddress">
+<view class="weui-cell weui-cell_input">
+ 
+  <view class="weui-cell__hd">
+ 
+    <view class="weui-label">收货人</view>
+ 
+  </view>
+ 
+  <view class="weui-cell__bd">
+ 
+    <input class="weui-input" name="consignee" placeholder="请输入姓名" />
+ 
+  </view>
+ 
+</view>
+ 
+<view class="weui-cell weui-cell_input">
+ 
+  <view class="weui-cell__hd">
+ 
+    <view class="weui-label">手机号</view>
+ 
+  </view>
+ 
+  <view class="weui-cell__bd">
+ 
+    <input class="weui-input" name="mobile" placeholder="请输入手机号" />
+ 
+  </view>
+ 
+</view>
+ 
+<view class="weui-cell weui-cell_select">
+ 
+  <view class="weui-cell__bd">
+ 
+    <picker bindchange="bindTransportDayChange" value="{{transportIndex}}" range="{{transportValues}}">
+ 
+      <view class="weui-select weui-select_in-select-after">{{transportValues[transportIndex]}}</view>
+ 
+      <input name="transportDay" hidden="true" value="{{transportValues[transportIndex]}}" />
+ 
+    </picker>
+ 
+  </view>
+ 
+</view>
+ 
+ 
+  <view class="weui-cells__title"></view>
+ 
+  <view class="weui-cells weui-cells_after-title">
+ 
+<view class="weui-cell weui-cell_input">
+ 
+  <view class="weui-cell__hd">
+ 
+    <view class="weui-label">详细地址</view>
+ 
+  </view>
+ 
+  <view class="weui-cell__bd">
+ 
+    <input class="weui-input" name="address" placeholder="请输入详细地址" />
+ 
+  </view>
+ 
+</view>
+  	</view>
+  	<button class="weui-btn" type="primary" bindtap="submit" form-type="submit">保存</button>
+</form>
